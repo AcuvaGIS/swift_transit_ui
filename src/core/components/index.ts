@@ -17,7 +17,6 @@ export * from "./nav/NavigationMenu";
 
 export * from "./badge/Badge";
 
-// export * from "./swap/";
 export * from "./under-construction/UnderConstruction";
 export * from "./button/Button";
 export * from "./radio/Radio";
