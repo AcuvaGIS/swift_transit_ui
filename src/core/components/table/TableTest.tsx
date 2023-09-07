@@ -8,8 +8,6 @@ import {
   TableRow,
 } from "./Table";
 
-import type { PaymentMethodType } from "@/types";
-
 // | "DazzleWallet"
 // | "Mpesa"
 // | "Equitel"
