@@ -40,6 +40,7 @@ export default defineConfig({
       { find: "@assets", replacement: "/src/assets" },
       { find: "@constants", replacement: "/src/constants" },
       { find: "@core", replacement: "/src/core" },
+      { find: "@context", replacement: "/src/context"},
       { find: "@layouts", replacement: "/src/layouts" },
       { find: "@pages", replacement: "/src/pages" },
       { find: "@types", replacement: "/src/types" },

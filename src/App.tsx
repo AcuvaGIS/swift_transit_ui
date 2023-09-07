@@ -4,19 +4,21 @@ import {
   UnderConstruction,
 } from "@core/components";
 import UserMap from "./map-test/Map";
-
+import MenuIcons from "./layouts/menu/MenuIcons";
+import ResetPassword from "./pages/auth/reset-password/ResetPassword";
+import Login from "./pages/auth/login/Login";
+import Register from "./pages/auth/register/Register";
 
 function App() {
   return (
-    <div className="text-red-300">
+    <div>
       <Routes>
         <Route path="/" element={<UserMap />} />
-        <Route path="/register" element={<UnderConstruction />} />
-        <Route path="/login" element={<UnderConstruction />} />
-        <Route path="/forgot-password" element={<UnderConstruction />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
 
-        {/* Dashboard */}
-
+        {/* TODO: Add User Dashboard */}
 
         {/* Matatus */}
         <Route path="/matatus" element={<UnderConstruction />}>
@@ -29,7 +31,6 @@ function App() {
           <Route path=":routeId" element={<UnderConstruction />} /> {/**Single Route */}
           <Route path="plan" element={<UnderConstruction />} /> {/**Plan Trip */}
         </Route>
-
 
         {/* Analytics */}
         <Route path="/analytics" element={<UnderConstruction />}>
@@ -53,13 +54,6 @@ function App() {
           <Route path="matatus" element={<UnderConstruction />} />
           <Route path="routes" element={<UnderConstruction />} />
           <Route path="users" element={<UnderConstruction />} />
-        </Route>
-
-        {/* Billing */}
-        <Route path="/billing" element={<UnderConstruction />}>
-          <Route path="subscribe" element={<UnderConstruction />} />
-
-          <Route path="cancel-subscription" element={<UnderConstruction />} />
         </Route>
 
         {/* Favorites */}
@@ -100,6 +94,8 @@ function App() {
           <Route path="generate" element={<UnderConstruction />} />
         </Route>
 
+        <Route path="menu-icons" element={<MenuIcons />} />
+
         <Route path="*" element={<UnderConstruction />} /> {/**404 PAGE */}
 
       </Routes>
@@ -108,3 +104,5 @@ function App() {
 }
 
 export default App;
+
+// TODO: Support anonymous auth and fully fledged account!

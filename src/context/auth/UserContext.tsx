@@ -1,5 +1,14 @@
 import { createContext, useState, ReactNode, useContext } from "react";
 
+/**
+ * 
+ * REVIEWS, FAVORITES
+ * CONTENT CHOICE TO CACHE
+ * THEME
+ * SETTINGS
+ * POINTS OF INTERESTS AND MORE
+  */
+
 export type UserType = {
     id?: number;
     username?: string;

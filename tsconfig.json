@@ -38,6 +38,9 @@
       "@constants/*": [
         "./src/constants/*"
       ],
+            "@context/*": [
+              "./src/context/*"
+            ],
       "@core/*": [
         "./src/core/*"
       ],

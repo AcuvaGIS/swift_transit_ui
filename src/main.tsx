@@ -25,7 +25,6 @@ Sentry.init({
 
 // TODO: https://docs.sentry.io/platforms/javascript/guides/react/configuration/integrations/react-router/
 
-
 // prompt for a refresh
 const updateSW = registerSW({
   onNeedRefresh() {

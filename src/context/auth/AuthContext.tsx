@@ -1,11 +1,12 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 
 export const AuthContext = createContext(null);
 
-function AuthContextProvider() {
+// eslint-disable-next-line react-refresh/only-export-components
+export const useAuthContext = () => useContext(AuthContext);
+
+export function AuthContextProvider() {
     return (
         <div>AuthContextProvider</div>
     )
 }
-
-export default AuthContextProvider;

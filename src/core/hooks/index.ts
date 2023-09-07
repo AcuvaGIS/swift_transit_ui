@@ -47,3 +47,24 @@ export { useWindowScroll } from "@uidotdev/usehooks";
 export { useList } from "@uidotdev/usehooks";
 export { useClickAway } from "@uidotdev/usehooks";
 export { useMeasure } from "@uidotdev/usehooks";
+
+
+// use-device-orientation ::
+/***
+ * // in mapping applications, to re-orient a map based on the device's position, or
+// to provide turn-by-turn directions that update with the user's movements
+ */
+
+
+// use-fullscreen
+// use-idle
+// use-intersections
+// use-mouse-mutations
+
+// use-pointer-event ::
+/** Unified way to handle different input methods: touch, mouse, stylus interactions
+ * Consistent and responsive UXfor vfor viewing maps or satellite imagery.iewing maps or satellite imagery.
+ */
+
+// use-wake-lock
+// use-web-share
