@@ -1,0 +1,32 @@
+Here's how you can use ComposeProviders in your HR system:
+
+// Example usage of ComposeProviders
+import React from 'react';
+import ComposeProviders from './ComposeProviders';
+
+// Your individual provider components
+const FirstProvider: React.FC = ({ children }) => {
+  return <div style={{ border: '1px solid red' }}>{children}</div>;
+};
+
+const SecondProvider: React.FC = ({ children }) => {
+  return <div style={{ border: '1px solid blue' }}>{children}</div>;
+};
+
+const ThirdProvider: React.FC = ({ children }) => {
+  return <div style={{ border: '1px solid green' }}>{children}</div>;
+};
+
+const FourthProvider: React.FC = ({ children }) => {
+  return <div style={{ border: '1px solid yellow' }}>{children}</div>;
+};
+
+const HRSystem: React.FC = () => {
+  return (
+    <ComposeProviders providers={[FirstProvider, SecondProvider, { component: ThirdProvider }, FourthProvider]}>
+      <div>This is your HR system content</div>
+    </ComposeProviders>
+  );
+};
+
+export default HRSystem;

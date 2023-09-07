@@ -1,0 +1,85 @@
+/**
+ * FileInput Component Props
+ */
+interface FileInputProps {
+  /**
+   * The label for the file input.
+   */
+  label: string;
+
+  /**
+   * The ID attribute for the file input.
+   */
+  id?: string;
+
+  /**
+   * The file types accepted by the input (e.g., "image/*" for images, ".pdf" for PDF files).
+   */
+  accept?: string;
+
+  /**
+   * The maximum number of files that can be selected.
+   * @default 1
+   */
+  maxUploads?: number;
+
+  /**
+   * An array of supported file formats (MIME types).
+   * If provided, only files with these formats will be allowed for selection.
+   * If the array is empty, all formats will be accepted.
+   * @default []
+   */
+  supportedFormats?: string[];
+
+  /**
+   * A callback function that will be called when the selected file changes.
+   * @param file The selected file as a File object or null if no file is selected.
+   */
+  onChange: (file: File | null) => void;
+
+  /**
+   * Additional custom CSS classes that can be passed to the container.
+   */
+  className?: string;
+}
+
+/**
+ * FileInput Component
+ * A component for uploading files with support for maximum uploads and supported formats.
+ *
+ * @example
+ * ```tsx
+ * import React, { useState } from "react";
+ * import FileInput from "./FileInput";
+ *
+ * const App = () => {
+ *   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+ *
+ *   const handleFileChange = (file: File | null) => {
+ *     setSelectedFile(file);
+ *   };
+ *
+ *   return (
+ *     <div className="container mx-auto mt-8">
+ *       <FileInput
+ *         label="Upload Image"
+ *         accept="image/*"
+ *         maxUploads={1}
+ *         supportedFormats={[".jpg", ".png", ".gif"]}
+ *         onChange={handleFileChange}
+ *       />
+ *       {selectedFile && (
+ *         <p>Selected File: {selectedFile.name}</p>
+ *       )}
+ *     </div>
+ *   );
+ * };
+ *
+ * export default App;
+ * ```
+ *
+ * @param props The props for the FileInput component.
+ * @returns The FileInput component.
+ */
+const FileInput: React.FC<FileInputProps>;
+export default FileInput;
