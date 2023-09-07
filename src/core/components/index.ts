@@ -5,7 +5,6 @@ export * from "./file-input/FileInput";
 
 // export * from "./text-input/TextInput";
 export * from "./alert/Alert";
-export * from "./compose-contexts/ComposeContextProviders";
 export * from "./skeleton/Skeleton";
 export * from "./toast-wrapper/Toast";
 export * from "./auth";

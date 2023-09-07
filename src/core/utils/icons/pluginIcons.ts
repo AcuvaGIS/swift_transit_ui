@@ -1,1 +1,2 @@
-export function registerPluginIcons() {}
+// export function registerPluginIcons() {}
+export { }
