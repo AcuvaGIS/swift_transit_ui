@@ -14,23 +14,32 @@ function Map() {
 
     return (
         <div className="relative w-[100vw] h-screen">
-            <div className="absolute inset-y-0 bottom-0 md:left-0  bg-white z-10">
+            <div className="md:absolute inset-y-0 bottom-0 md:left-0 z-10">
                 <SidePanel />
             </div>
-            <MapContainer zoom={zoomLevel} center={position} scrollWheelZoom={true} style={{ marginLeft: '25%', width: '75%', height: '100vh' }}>
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={position}>
-                    <Popup>
-                        TODO: Custom Popup
-                    </Popup>
-                </Marker>
 
-                <LocationMarker />
-            </MapContainer>
+            <div className="md:ml-[25%] w-full h-screen">
+                <MapContainer
+                    zoom={zoomLevel}
+                    center={position}
+                    scrollWheelZoom={true}
+                    className="w-full h-full"
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={position}>
+                        <Popup>
+                            TODO: Custom Popup
+                        </Popup>
+                    </Marker>
+
+                    <LocationMarker />
+                </MapContainer>
+            </div>
         </div>
+
     );
 }
 
