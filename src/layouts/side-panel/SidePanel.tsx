@@ -49,9 +49,9 @@ export function SidePanel() {
                                     key={tabList}
                                     value={tabList}
                                     onClick={() => changeTab(tabList)}
-                                    className={`w-full px-6 py-2 rounded ${activeTab === tabList
-                                            ? 'bg-blue-500 text-white'
-                                            : 'hover:bg-gray-300'
+                                    className={`px-6 py-2 rounded ${activeTab === tabList
+                                        ? 'bg-slate-600 text-white'
+                                        : 'hover:bg-slate-700'
                                         }`}
                                 >
                                     {tabList}
