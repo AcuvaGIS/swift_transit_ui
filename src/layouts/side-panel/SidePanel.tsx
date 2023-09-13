@@ -36,33 +36,38 @@ export function SidePanel() {
     };
 
     return (
-        <div className="fixed h-auto md:h-screen w-full md:w-1/4 bg-slate-500 text-white bg-opacity-90 z-10">
-            <div className="">
+        <div className="fixed h-auto md:h-screen w-full md:w-[25%] bg-slate-500 text-white z-10 side-panel">
+            <div className="p-4">
                 <Menu size={32} />
             </div>
             <div className="p-4">
                 <Tabs defaultValue={activeTab} className="space-y-2">
                     <TabsList className="flex justify-between items-center flex-wrap mb-10">
-                        {
-                            _TabsList.map((tabList) => (
-                                <div>
-                                    <TabsTrigger key={tabList} value={tabList} onClick={() => changeTab(tabList)} className={`w-full px-6 py-2 rounded ${activeTab === tabList ? 'bg-blue-500 text-white' : 'hover:bg-gray-300'}`}>
-                                        {tabList}
-                                    </TabsTrigger>
-                                </div>
-                            ))
-                        }
+                        {_TabsList.map((tabList) => (
+                            <div key={tabList}>
+                                <TabsTrigger
+                                    key={tabList}
+                                    value={tabList}
+                                    onClick={() => changeTab(tabList)}
+                                    className={`px-6 py-2 rounded ${activeTab === tabList
+                                        ? 'bg-slate-600 text-white'
+                                        : 'hover:bg-slate-700'
+                                        }`}
+                                >
+                                    {tabList}
+                                </TabsTrigger>
+                            </div>
+                        ))}
                     </TabsList>
 
-                    {
-                        PanelTabs.map((PanelTabContent) => (
-                            <TabsContent value={PanelTabContent.tabName}>
-                                {PanelTabContent.component}
-                            </TabsContent>
-                        ))
-                    }
+                    {PanelTabs.map((PanelTabContent) => (
+                        <TabsContent key={PanelTabContent.tabName} value={PanelTabContent.tabName}>
+                            {PanelTabContent.component}
+                        </TabsContent>
+                    ))}
                 </Tabs>
             </div>
         </div>
+
     );
 }
